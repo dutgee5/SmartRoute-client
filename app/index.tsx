@@ -4,8 +4,6 @@ import {
   Text,
   ActivityIndicator,
   TouchableOpacity,
-  StyleSheet,
-  Image,
 } from "react-native";
 import { useRouter } from "expo-router";
 import * as SecureStore from "expo-secure-store";
