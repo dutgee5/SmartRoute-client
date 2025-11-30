@@ -1,36 +1,84 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../theme/colors'; 
+import { colors } from '../../theme/colors';
 
 export const styles = StyleSheet.create({
-  container: { 
-    flexDirection: 'row', 
-    justifyContent: 'space-between', 
-    marginVertical: 15 
+  container: {
+    position: 'absolute',
+    bottom: 30,
+    left: 20,
+    right: 20,
+    backgroundColor: colors.card,
+    borderRadius: 20,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    elevation: 10,
   },
-  button: { 
-    flex: 1, 
-    alignItems: 'center', 
-    padding: 12, 
-    marginHorizontal: 5, 
-    borderRadius: 12, 
-    backgroundColor: colors.input,  
-    borderWidth: 1, 
-    borderColor: colors.border 
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 15,
   },
-  buttonSelected: { 
-    backgroundColor: colors.primary, 
-    borderColor: colors.primary 
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: colors.textPrimary,
   },
-  icon: { 
-    fontSize: 24, 
-    marginBottom: 4 
+  closeButton: {
+    padding: 5,
   },
-  text: { 
-    fontSize: 13, 
-    fontWeight: '600', 
-    color: colors.textPrimary 
+  closeText: {
+    fontSize: 20,
+    color: colors.textSecondary,
+    fontWeight: 'bold',
   },
-  textSelected: { 
-    color: colors.textWhite 
+  optionCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.background,
+    padding: 15,
+    borderRadius: 12,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: 'transparent',
+  },
+  selectedCard: {
+    borderColor: colors.primary,
+    backgroundColor: colors.input,
+  },
+  icon: {
+    fontSize: 24,
+    marginRight: 15,
+  },
+  infoContainer: {
+    flex: 1,
+  },
+  typeText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: colors.textPrimary,
+  },
+  detailText: {
+    fontSize: 12,
+    color: colors.textSecondary,
+    marginTop: 2,
+  },
+  priceText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: colors.primary,
+  },
+  startButton: {
+    backgroundColor: colors.primary,
+    padding: 15,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  startButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
 });

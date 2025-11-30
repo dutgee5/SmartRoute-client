@@ -14,12 +14,14 @@ interface MapBackgroundProps {
   location: any;
   destination: any;
   onMapPress: (e: MapPressEvent) => void;
+  transportMode: 'DRIVING' | 'WALKING' | 'TRANSIT'; 
 }
 
 export const MapBackground: React.FC<MapBackgroundProps> = ({
   region,
   location,
   destination,
+  transportMode,
   onMapPress,
 }) => {
   const GOOGLE_API_KEY = process.env.EXPO_PUBLIC_GOOGLE_MAPS_KEY;
@@ -48,6 +50,7 @@ export const MapBackground: React.FC<MapBackgroundProps> = ({
           apikey={GOOGLE_API_KEY || ""}
           strokeWidth={4}
           strokeColor={colors.primary}
+          mode={transportMode}
           onError={(err) => console.log("Rota Hatası:", err)}
         />
       )}
