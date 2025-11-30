@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import * as Location from 'expo-location';
 import { Alert } from 'react-native';
+import { MapPressEvent } from 'react-native-maps';
 
 export const useMap = () => {
   const [location, setLocation] = useState<Location.LocationObject | null>(null);
+  const [destination, setDestination] = useState<any>(null);
   const [region, setRegion] = useState({
     latitude: 41.0082,
     longitude: 28.9784,
@@ -40,5 +42,16 @@ export const useMap = () => {
     })();
   }, []);
 
-  return { location, region, loading };
+  const onMapPress = (e: MapPressEvent) => {
+    setDestination(e.nativeEvent.coordinate);
+  };
+
+  return {
+    location,
+    region,
+    loading,
+    destination,
+    setDestination,
+    onMapPress
+  };
 };

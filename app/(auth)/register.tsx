@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { useRegister } from '../../src/hooks/auth/useRegister';
 import { styles } from './register.styles';
-import { TransportSelector } from '../../src/components/TransportSelector';
+import { TransportSelector } from '../../src/components/map/TransportSelector';
 
 export default function RegisterScreen() {
   const { 
